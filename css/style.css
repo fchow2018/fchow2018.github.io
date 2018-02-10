@@ -242,19 +242,18 @@ button:hover {
 About
 ------------------------------------------- */
 
-.inspiration_quote blockquote {
+.inspirational_quote blockquote {
 	font-size: 15px;
 	text-transform: uppercase;
-	margin-top: -6em;
+	margin-top: -1em;
+	border: 2px solid #041E41;
+	background-color: #FF4C00;
+	padding: 2em 3em 2em 3em;
 }
 
-.inspiration_quote h2 {
+.inspirational_quote h2 {
 	font-size: 15px;
 	/*margin-bottom: 100em;*/
-}
-
-hr {
-	border: 5px solid black;
 }
 
 .about article {
@@ -325,10 +324,6 @@ Testimonials
 	text-align: center;
 	/*margin-bottom: 2em;*/
 	margin-bottom: 2em;
-	text-transform: none;
-}
-
-blockquote {
 	text-transform: none;
 }
 
