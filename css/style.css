@@ -17,6 +17,13 @@ body {
 	letter-spacing: .02em;
 	text-align: center;
 	color: #44545E;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url('../images/20160618_FelixUniversityGraduation_edited.jpg');
+	background-attachment: fixed;
+	height: 100vh;
+	min-width:900px;
 }
 
 /* Responsive images */
@@ -146,8 +153,12 @@ section {
 }
 
 .callout {
-	background-color: #007889;
+	background-color: #007889;	
 }
+
+/*.callout #testimonials {
+	background-color: rgba(0, 120, 137, 0.5);
+}*/
 
 /* ----------------------------------------
 Header
@@ -159,6 +170,7 @@ header {
 	background-image: url('../images/20160618_FelixUniversityGraduation_edited.jpg');
 	background-attachment: fixed;
 	height: 100vh;
+	min-width:900px;
 }
 
 #welcome {
@@ -245,15 +257,20 @@ About
 .inspirational_quote blockquote {
 	font-size: 15px;
 	text-transform: uppercase;
-	margin-top: -1em;
+/*	margin-top: -1em;
 	border: 2px solid #041E41;
-	background-color: #FF4C00;
-	padding: 2em 3em 2em 3em;
+	background-color: #FF4C00;*/
+	padding: 1em 3em 1em 3em;
+	/*color: #FF4C00;*/
 }
 
 .inspirational_quote h2 {
 	font-size: 15px;
 	/*margin-bottom: 100em;*/
+}
+
+#about .callout.about{
+	background-color: rgba(0, 120, 137, 0.2);
 }
 
 .about article {
@@ -266,7 +283,7 @@ About
 }
 
 .about h2 {
-	margin-top: 1.5em;
+	margin-top: 0.5em;
 	margin-bottom: 1em;
 	color: #fff;
 }
@@ -275,6 +292,10 @@ About
 /* ----------------------------------------
 Portfolio
 ------------------------------------------- */
+
+#portfolio {
+	background-color: #fff;
+}
 
 #portfolio h2 {
 	margin-bottom: 1em;
@@ -293,6 +314,7 @@ li {
 
 h3, p {
 	text-align: center;
+	font-weight: 600;
 }
 
 #myCarousel .active {
@@ -315,16 +337,26 @@ h3, p {
 Testimonials
 ------------------------------------------- */
 
+#testimonials {
+	background-color: rgba(255, 221, 0, 0.7);
+}
+
 .testimonials article {
-	max-width: 600px;
+	max-width: 700px;
 	font-size: 17.6px;
 	font-size: 1.1rem;
+	font-weight: 500;
 	line-height: 1.1;
-	color: #fff;
-	text-align: center;
-	/*margin-bottom: 2em;*/
+	color: #000;
+	text-align: left;
+	/*word-break: break-all;*/
+	word-break: break-word;
+	/*hyphens: manual;*/
 	margin-bottom: 2em;
 	text-transform: none;
+	background-color: rgba(255, 221, 0, 0.7);
+	padding: 3em 5em 3em 5em;
+	width: 30%;
 }
 
 /*.testimonials p {
@@ -333,7 +365,6 @@ Testimonials
 
 .testimonials h2 {
 	margin-bottom: 1em;
-	color: #fff;
 	text-transform: uppercase;
 	/*text-align: center;*/
 }
@@ -342,11 +373,38 @@ Testimonials
 	margin-bottom: 3em;
 }
 
+/*@-webkit-keyframes fade-in{
+    from{
+        opacity:1;
+        top:0px;
+    }
+    to{
+        opacity:0;
+        top:0px;
+    }
+}
+.testimonial_one {
+    display:inline;
+    position:relative;
+    top:0px;
+    -webkit-animation:fade-in 1s infinite;
+
+}
+.testimonial_one {
+    opacity:0;
+    display:inline;
+    position:relative;
+    margin-left:-56px;
+    -webkit-animation:fade-in 1s infinite;
+    -webkit-animation-delay:0.5s;
+}*/
+
 /* ----------------------------------------
 Forms
 ------------------------------------------- */
 
 #contact {
+	background-color: #fff;
 	padding-top: 2rem;
 	text-align: center;
 }
@@ -381,6 +439,7 @@ input, textarea {
 	margin-bottom: .8rem;
 	padding: 10px 10px;
 	outline: 0;
+	/*font-weight: bold;*/
 }
 
 ::-webkit-input-placeholder {
@@ -390,7 +449,7 @@ input, textarea {
    letter-spacing: .05rem;
    font-size: 12.299px;
    font-size: .82rem;
-   font-weight: 600;
+   font-weight: 800;
 }
 
 :-moz-placeholder { /* Firefox 18- */
@@ -431,17 +490,6 @@ footer {
 	overflow: auto;
 }
 
-.social-links a {
-	font-size: 30px;
-	font-size: 2rem;
-	padding: 15px;
-	padding: 1rem;
-	margin-bottom: 30px;
-	margin-bottom: 2rem;
-	display: inline-block;
-	color: #44545E;
-}
-
 .copyright {
 	border-top: 2px solid #44545E;
 	padding: 15px 0 3px;
@@ -478,11 +526,9 @@ Media Queries
 	nav a {
 		padding: .1rem 2rem;
 	}
+
 	.col-third {
 		width: 100%;
-	}
-	.articles button {
-		margin-top: .5rem;
 	}
 
 	.col-third img {
@@ -508,13 +554,33 @@ Media Queries
 		font-size: 14px;
 	}
 
+	/*nav a {
+		padding:6em -60em 3em 0;
+	}*/
+
 	nav a {
-		padding:3em -3em 3em 0;
-	}
+	font-weight: 600;
+	letter-spacing: 15px;
+	letter-spacing: .05rem;
+	/*padding: 3px 70px;*/
+	padding: 1rem 3.5rem 5rem;
+	margin: -1em -10em 0 0;
+	display: inline-block;
+	border-bottom: none;
+	text-transform: uppercase;
+	color: white;
+}
 
 	nav ul {
 		display: none;
 	}
+
+/*	nav li {
+	display: inline-block;
+	margin-left: 1em;
+	margin-bottom: -5em;
+}*/
+
 
 	nav {
 		background-color: transparent;
@@ -529,17 +595,6 @@ Media Queries
 		left: 2px;
 	}
 
-	.col-half {
-		width: 100%;
-	}
-
-	footer button {
-		width: 300px;
-	}
-	
-	footer input {
-		margin-right: 0;
-	}
 <<<<<<< HEAD
 }
 =======
